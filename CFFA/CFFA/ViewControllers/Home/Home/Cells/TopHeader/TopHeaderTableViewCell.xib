@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TopHeaderTableViewCell" id="KGk-i7-Jjw" customClass="TopHeaderTableViewCell" customModule="CFFA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhE-It-VRu">
+                        <rect key="frame" x="25" y="0.0" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="xhE-It-VRu" secondAttribute="height" multiplier="1:1" id="BLY-1N-HBT"/>
+                        </constraints>
+                        <state key="normal" image="notificationOffIcon"/>
+                        <connections>
+                            <action selector="openNotif" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2kL-Jf-Opg"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVh-Mb-2RP">
+                        <rect key="frame" x="203" y="0.0" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fVh-Mb-2RP" secondAttribute="height" multiplier="1:1" id="Pka-rD-XlR"/>
+                        </constraints>
+                        <state key="normal" image="searchIcon"/>
+                        <connections>
+                            <action selector="openSearch" destination="KGk-i7-Jjw" eventType="touchUpInside" id="y9t-kl-EQw"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CY-x3-dCk" customClass="CustomButton" customModule="CFFA" customModuleProvider="target">
+                        <rect key="frame" x="267" y="8" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="8CY-x3-dCk" secondAttribute="height" multiplier="1:1" id="oo1-Fx-DpX"/>
+                        </constraints>
+                        <state key="normal" image="illustrationAddPhoto"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="openProfile" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eTc-QP-qHO"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="xhE-It-VRu" secondAttribute="bottom" id="5Vr-N0-0Jz"/>
+                    <constraint firstAttribute="bottom" secondItem="fVh-Mb-2RP" secondAttribute="bottom" id="5X3-tT-4DF"/>
+                    <constraint firstAttribute="bottom" secondItem="8CY-x3-dCk" secondAttribute="bottom" constant="8" id="6r0-JY-cyV"/>
+                    <constraint firstItem="xhE-It-VRu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="87p-Gm-Azf"/>
+                    <constraint firstItem="8CY-x3-dCk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Irf-ie-2IW"/>
+                    <constraint firstAttribute="trailing" secondItem="8CY-x3-dCk" secondAttribute="trailing" constant="25" id="Rs4-UR-0gU"/>
+                    <constraint firstItem="xhE-It-VRu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Yda-KT-7Fb"/>
+                    <constraint firstItem="fVh-Mb-2RP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="flt-vh-ME5"/>
+                    <constraint firstItem="8CY-x3-dCk" firstAttribute="leading" secondItem="fVh-Mb-2RP" secondAttribute="trailing" constant="20" id="rjE-IZ-MyN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="profileButton" destination="8CY-x3-dCk" id="Ztp-LO-9Fl"/>
+            </connections>
+            <point key="canvasLocation" x="126" y="125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="illustrationAddPhoto" width="155" height="155"/>
+        <image name="notificationOffIcon" width="40" height="40"/>
+        <image name="searchIcon" width="40" height="40"/>
+    </resources>
+</document>

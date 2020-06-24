@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="VVy-cL-Bfd">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="66v-Iz-gCv" customClass="HomeViewController" customModule="CFFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QNY-80-9Mc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" indicatorStyle="black" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SIV-q7-bTa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="66v-Iz-gCv" id="wxn-Ij-ZoG"/>
+                                    <outlet property="delegate" destination="66v-Iz-gCv" id="rmj-N1-wtf"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bin-VW-LAp">
+                                <rect key="frame" x="294" y="742" width="120" height="120"/>
+                                <state key="normal" image="addSketchIcon"/>
+                                <connections>
+                                    <action selector="addSketch" destination="66v-Iz-gCv" eventType="touchUpInside" id="H36-0h-5DL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="udf-4b-Onk" firstAttribute="bottom" secondItem="bin-VW-LAp" secondAttribute="bottom" id="5hc-Oh-UAS"/>
+                            <constraint firstItem="udf-4b-Onk" firstAttribute="trailing" secondItem="bin-VW-LAp" secondAttribute="trailing" id="8K8-GV-PTS"/>
+                            <constraint firstItem="SIV-q7-bTa" firstAttribute="top" secondItem="udf-4b-Onk" secondAttribute="top" id="BCP-CD-vrz"/>
+                            <constraint firstItem="SIV-q7-bTa" firstAttribute="trailing" secondItem="udf-4b-Onk" secondAttribute="trailing" id="Rzn-U7-mvN"/>
+                            <constraint firstItem="udf-4b-Onk" firstAttribute="bottom" secondItem="SIV-q7-bTa" secondAttribute="bottom" id="etG-8b-fFv"/>
+                            <constraint firstItem="SIV-q7-bTa" firstAttribute="leading" secondItem="udf-4b-Onk" secondAttribute="leading" id="rKt-yC-8Wn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="udf-4b-Onk"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="SIV-q7-bTa" id="oYU-Nw-I5D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OgC-W7-JCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-117.39130434782609" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addSketchIcon" width="120" height="120"/>
+    </resources>
+</document>

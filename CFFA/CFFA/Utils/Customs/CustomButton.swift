@@ -1,0 +1,93 @@
+//
+//  CustomButton.swift
+//  CFFA
+//
+//  Created by Cristian Bularu on 2/20/20.
+//  Copyright © 2020 Cristian Bularu. All rights reserved.
+//
+
+import UIKit
+
+
+
+
+@IBDesignable
+class CustomButton: UIButton {
+    
+    @IBInspectable var cornerRadius: Double {
+         get {
+           return Double(self.layer.cornerRadius)
+         }set {
+           self.layer.cornerRadius = CGFloat(newValue)
+         }
+    }
+    @IBInspectable var borderWidth: Double {
+          get {
+            return Double(self.layer.borderWidth)
+          }
+          set {
+           self.layer.borderWidth = CGFloat(newValue)
+          }
+    }
+    @IBInspectable var borderColor: UIColor? {
+         get {
+            return UIColor(cgColor: self.layer.borderColor!)
+         }
+         set {
+            self.layer.borderColor = newValue?.cgColor
+         }
+    }
+    @IBInspectable var shadowColor: UIColor? {
+        get {
+            return UIColor(cgColor: self.layer.shadowColor!)
+        }
+        set {
+            self.layer.shadowColor = newValue?.cgColor
+            
+        }
+    }
+    @IBInspectable var shadowOffSet: CGSize {
+        get {
+            return self.layer.shadowOffset
+        }
+        set {
+            self.layer.shadowOffset = newValue
+        }
+    }
+    @IBInspectable var shadowRadius: CGFloat {
+        get {
+            return self.layer.shadowRadius
+        }
+        set {
+            self.layer.shadowRadius = newValue
+        }
+    }
+    @IBInspectable var shadowOpacity: Float {
+        get {
+            return self.layer.shadowOpacity
+        }
+        set {
+            self.layer.shadowOpacity = newValue
+        }
+    }
+    
+    override open var isEnabled: Bool {
+        didSet {
+            if !self.isEnabled {
+                self.alpha = 0.55
+            } else {
+                self.alpha = 1
+            }
+        }
+    }
+    
+    override open var isHighlighted: Bool {
+        didSet {
+            if self.isHighlighted {
+                self.alpha = 0.55
+            } else {
+                self.alpha = 1
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="OtherLoginView" customModule="CFFA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6ab-12-1Y4">
+                    <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csi-us-epl" customClass="CustomButton" customModule="CFFA" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="csi-us-epl" secondAttribute="height" id="dqW-Fs-Etk"/>
+                            </constraints>
+                            <state key="normal" image="googleIcon"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.9137254901960784" green="0.9137254901960784" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="googleAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="WbG-Mr-X8e"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nm9-FE-iip" customClass="CustomButton" customModule="CFFA" customModuleProvider="target">
+                            <rect key="frame" x="145" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="499" constant="60" id="2lU-Zz-lZ6"/>
+                                <constraint firstAttribute="width" secondItem="Nm9-FE-iip" secondAttribute="height" id="6Lg-Yr-9al"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="6dR-Vn-MvF"/>
+                            </constraints>
+                            <state key="normal" image="facebookIcon"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.91372549020000005" green="0.91372549020000005" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="facebookAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="gTx-uy-zIc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04f-mw-uqZ" customClass="CustomButton" customModule="CFFA" customModuleProvider="target">
+                            <rect key="frame" x="290" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="04f-mw-uqZ" secondAttribute="height" id="lr1-b2-dPa"/>
+                            </constraints>
+                            <state key="normal" image="appleIcon"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.91372549020000005" green="0.91372549020000005" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="appleAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="xEn-Am-naw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="csi-us-epl" firstAttribute="height" secondItem="Nm9-FE-iip" secondAttribute="height" id="GMQ-LS-p3y"/>
+                        <constraint firstItem="04f-mw-uqZ" firstAttribute="height" secondItem="Nm9-FE-iip" secondAttribute="height" id="rwT-hK-W4R"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6ab-12-1Y4" secondAttribute="bottom" id="AvF-ei-ke6"/>
+                <constraint firstAttribute="trailing" secondItem="6ab-12-1Y4" secondAttribute="trailing" id="MOw-Ek-tWx"/>
+                <constraint firstItem="6ab-12-1Y4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PNF-W7-bIX"/>
+                <constraint firstItem="6ab-12-1Y4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gbh-wX-NMN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-223.18840579710147" y="395.08928571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="appleIcon" width="15" height="19"/>
+        <image name="facebookIcon" width="10" height="19"/>
+        <image name="googleIcon" width="16" height="16"/>
+    </resources>
+</document>

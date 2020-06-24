@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Account Set Up View Controller-->
+        <scene sceneID="sX1-wW-cOH">
+            <objects>
+                <viewController storyboardIdentifier="AccountSetUpViewController" id="l7f-pO-w0d" customClass="AccountSetUpViewController" customModule="CFFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tIl-ni-Plw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add profile photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MO-g0-aog">
+                                <rect key="frame" x="25" y="84" width="185.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a profile photo so that your friends know it's you." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq6-I6-0aM">
+                                <rect key="frame" x="25" y="122" width="364" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUl-CS-r3K">
+                                <rect key="frame" x="103.5" y="324.5" width="207" height="207"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illustrationAddPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="iHz-Io-gMg">
+                                        <rect key="frame" x="16" y="16" width="175" height="175"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="changePhotoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="YTn-qT-yx4">
+                                        <rect key="frame" x="172" y="172" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="4zj-g0-WhH"/>
+                                            <constraint firstAttribute="height" constant="35" id="nPz-TU-sgj"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gUl-CS-r3K" secondAttribute="height" multiplier="1:1" id="1Xq-zT-yOs"/>
+                                    <constraint firstAttribute="trailing" secondItem="iHz-Io-gMg" secondAttribute="trailing" constant="16" id="2CO-18-4cE"/>
+                                    <constraint firstItem="iHz-Io-gMg" firstAttribute="top" secondItem="gUl-CS-r3K" secondAttribute="top" constant="16" id="Zg9-Cl-7jW"/>
+                                    <constraint firstAttribute="bottom" secondItem="YTn-qT-yx4" secondAttribute="bottom" id="b5V-UL-9n1"/>
+                                    <constraint firstAttribute="trailing" secondItem="YTn-qT-yx4" secondAttribute="trailing" id="m7E-GV-XnY"/>
+                                    <constraint firstItem="iHz-Io-gMg" firstAttribute="leading" secondItem="gUl-CS-r3K" secondAttribute="leading" constant="16" id="n5l-U2-zb6"/>
+                                    <constraint firstAttribute="bottom" secondItem="iHz-Io-gMg" secondAttribute="bottom" constant="16" id="qlg-Af-INa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gsj-5k-0MQ" appends="YES" id="Y2F-gU-QX9"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycj-Se-cpu" customClass="CustomButton" customModule="CFFA" customModuleProvider="target">
+                                <rect key="frame" x="25" y="725" width="364" height="60"/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.17254901959999999" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="RxE-sx-RQ8"/>
+                                    <constraint firstAttribute="height" priority="499" constant="60" id="Yzy-Nf-n3g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Add a photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.32156862749999998" green="0.17254901959999999" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffSet">
+                                        <size key="value" width="0.0" height="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonAddPhoto" destination="l7f-pO-w0d" eventType="touchUpInside" id="f8e-iP-ywu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxB-iz-Yoz">
+                                <rect key="frame" x="191" y="810" width="32" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <action selector="skip" destination="l7f-pO-w0d" eventType="touchUpInside" id="XEk-HE-prn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="8MO-g0-aog" firstAttribute="top" secondItem="Ss8-wL-d9l" secondAttribute="top" constant="40" id="8tS-ef-seX"/>
+                            <constraint firstItem="YxB-iz-Yoz" firstAttribute="centerX" secondItem="Ss8-wL-d9l" secondAttribute="centerX" id="Bk6-lL-hEz"/>
+                            <constraint firstItem="Ss8-wL-d9l" firstAttribute="trailing" secondItem="Ycj-Se-cpu" secondAttribute="trailing" constant="25" id="FJx-X9-aEf"/>
+                            <constraint firstItem="8MO-g0-aog" firstAttribute="leading" secondItem="Ss8-wL-d9l" secondAttribute="leading" constant="25" id="GCV-hf-hjy"/>
+                            <constraint firstItem="Ss8-wL-d9l" firstAttribute="trailing" secondItem="sq6-I6-0aM" secondAttribute="trailing" constant="25" id="Kh2-ZN-hbK"/>
+                            <constraint firstItem="gUl-CS-r3K" firstAttribute="centerX" secondItem="tIl-ni-Plw" secondAttribute="centerX" id="Mft-Pd-Oau"/>
+                            <constraint firstItem="Ycj-Se-cpu" firstAttribute="leading" secondItem="Ss8-wL-d9l" secondAttribute="leading" constant="25" id="R35-Ni-zcg"/>
+                            <constraint firstItem="gUl-CS-r3K" firstAttribute="width" secondItem="tIl-ni-Plw" secondAttribute="width" multiplier="0.5" id="VNt-Dj-O8J"/>
+                            <constraint firstItem="gUl-CS-r3K" firstAttribute="centerY" secondItem="tIl-ni-Plw" secondAttribute="centerY" constant="-20" id="frD-09-Law"/>
+                            <constraint firstItem="sq6-I6-0aM" firstAttribute="leading" secondItem="Ss8-wL-d9l" secondAttribute="leading" constant="25" id="lU5-mQ-iYT"/>
+                            <constraint firstItem="YxB-iz-Yoz" firstAttribute="top" secondItem="Ycj-Se-cpu" secondAttribute="bottom" constant="25" id="sYv-ae-GGa"/>
+                            <constraint firstItem="sq6-I6-0aM" firstAttribute="top" secondItem="8MO-g0-aog" secondAttribute="bottom" constant="8" id="tko-2h-ob4"/>
+                            <constraint firstItem="Ss8-wL-d9l" firstAttribute="bottom" secondItem="YxB-iz-Yoz" secondAttribute="bottom" constant="20" id="uiW-UY-XkJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ss8-wL-d9l"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yRS-G8-THg"/>
+                    <connections>
+                        <outlet property="addPhotoBtn" destination="Ycj-Se-cpu" id="W7Z-q1-3lo"/>
+                        <outlet property="profilePicture" destination="iHz-Io-gMg" id="UD6-Ns-eMO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXZ-fY-p4i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gsj-5k-0MQ">
+                    <connections>
+                        <action selector="tapGestureAddPhoto:" destination="l7f-pO-w0d" id="mxZ-S8-XZB"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="130.43478260869566" y="58.928571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="changePhotoIcon" width="39" height="39"/>
+        <image name="illustrationAddPhoto" width="155" height="155"/>
+    </resources>
+</document>

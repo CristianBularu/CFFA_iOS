@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reusable Pop Up View Controller-->
+        <scene sceneID="Gbh-K0-Nfu">
+            <objects>
+                <viewController storyboardIdentifier="ReusablePopUpViewController" id="luE-dp-chL" customClass="ReusablePopUpViewController" customModule="CFFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fBk-jm-MvZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wE-ao-Ejy" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JhI-Nv-RJj" appends="YES" id="FV0-JG-6CJ"/>
+                                </connections>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcY-2Z-pEs" customClass="CustomView" customModule="CFFA" customModuleProvider="target">
+                                <rect key="frame" x="25" y="271" width="364" height="364"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HE2-fR-Oe7">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="364"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HE2-fR-Oe7" firstAttribute="leading" secondItem="UcY-2Z-pEs" secondAttribute="leading" id="3LQ-4t-TpO"/>
+                                    <constraint firstAttribute="width" secondItem="UcY-2Z-pEs" secondAttribute="height" multiplier="1:1" id="Aag-zj-yO0"/>
+                                    <constraint firstItem="HE2-fR-Oe7" firstAttribute="top" secondItem="UcY-2Z-pEs" secondAttribute="top" id="Fjf-QD-a4g"/>
+                                    <constraint firstAttribute="bottom" secondItem="HE2-fR-Oe7" secondAttribute="bottom" id="MTx-X9-iqt"/>
+                                    <constraint firstAttribute="trailing" secondItem="HE2-fR-Oe7" secondAttribute="trailing" id="kf5-II-2ey"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="HE2-fR-Oe7"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UcY-2Z-pEs" firstAttribute="centerY" secondItem="rLm-6Z-uB9" secondAttribute="centerY" id="407-Ib-VKN"/>
+                            <constraint firstItem="rLm-6Z-uB9" firstAttribute="trailing" secondItem="UcY-2Z-pEs" secondAttribute="trailing" constant="25" id="Cph-GX-KeB"/>
+                            <constraint firstItem="9wE-ao-Ejy" firstAttribute="trailing" secondItem="rLm-6Z-uB9" secondAttribute="trailing" id="F2D-Fn-7zj"/>
+                            <constraint firstItem="9wE-ao-Ejy" firstAttribute="top" secondItem="fBk-jm-MvZ" secondAttribute="top" id="Mcl-69-pTa"/>
+                            <constraint firstAttribute="bottom" secondItem="9wE-ao-Ejy" secondAttribute="bottom" id="S3u-wc-hFC"/>
+                            <constraint firstItem="UcY-2Z-pEs" firstAttribute="leading" secondItem="rLm-6Z-uB9" secondAttribute="leading" constant="25" id="XJ3-5p-x1H"/>
+                            <constraint firstItem="9wE-ao-Ejy" firstAttribute="leading" secondItem="rLm-6Z-uB9" secondAttribute="leading" id="yDq-Ox-bfl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rLm-6Z-uB9"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="UcY-2Z-pEs" id="Kxh-aw-1sj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATd-zK-Cbw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JhI-Nv-RJj">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="luE-dp-chL" id="qOW-rQ-9UL"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="107.8125"/>
+        </scene>
+    </scenes>
+</document>

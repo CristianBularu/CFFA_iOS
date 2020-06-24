@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UpRiseMenuView" customModule="CFFA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="302"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxS-Rh-tKe" customClass="CustomButton" customModule="CFFA" customModuleProvider="target">
+                    <rect key="frame" x="25" y="242" width="364" height="60"/>
+                    <color key="backgroundColor" red="0.32156862749999998" green="0.17254901959999999" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="YNZ-QP-UpQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="Cancel">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cancel" destination="iN0-l3-epB" eventType="touchUpInside" id="xDD-Sx-Wrp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6S-Rb-JZ6" customClass="CustomButton" customModule="CFFA" customModuleProvider="target">
+                    <rect key="frame" x="25" y="152" width="364" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="wQU-NG-RD4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="Button1">
+                        <color key="titleColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.9137254901960784" green="0.9137254901960784" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="button2Action" destination="iN0-l3-epB" eventType="touchUpInside" id="s9u-aR-dHp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STe-BM-lcu" customClass="CustomButton" customModule="CFFA" customModuleProvider="target">
+                    <rect key="frame" x="25" y="62" width="364" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="dpQ-Ua-zOo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="Button1">
+                        <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.91372549020000005" green="0.91372549020000005" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="button1Action" destination="iN0-l3-epB" eventType="touchUpInside" id="sHt-AZ-8U8"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add profile photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KU3-Oa-pgW">
+                    <rect key="frame" x="141" y="0.0" width="132.5" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ZxS-Rh-tKe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="a6S-Rb-JZ6" secondAttribute="bottom" constant="16" id="027-69-FIM"/>
+                <constraint firstItem="KU3-Oa-pgW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0cv-6d-Plq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZxS-Rh-tKe" secondAttribute="trailing" constant="25" id="1t0-jS-HDr"/>
+                <constraint firstItem="a6S-Rb-JZ6" firstAttribute="top" secondItem="STe-BM-lcu" secondAttribute="bottom" priority="499" constant="30" id="Kro-x7-rRu"/>
+                <constraint firstItem="a6S-Rb-JZ6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="STe-BM-lcu" secondAttribute="bottom" constant="16" id="LyT-2S-OGr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZxS-Rh-tKe" secondAttribute="bottom" id="aII-lm-O86"/>
+                <constraint firstItem="STe-BM-lcu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="aJI-ND-pK5"/>
+                <constraint firstItem="ZxS-Rh-tKe" firstAttribute="top" secondItem="a6S-Rb-JZ6" secondAttribute="bottom" priority="499" constant="30" id="dkL-xm-UJ0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="a6S-Rb-JZ6" secondAttribute="trailing" constant="25" id="ePS-gM-HW4"/>
+                <constraint firstItem="STe-BM-lcu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KU3-Oa-pgW" secondAttribute="bottom" constant="24" id="gS8-z5-1Ts"/>
+                <constraint firstItem="KU3-Oa-pgW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ncV-mv-g64"/>
+                <constraint firstItem="ZxS-Rh-tKe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="p0Y-1Q-ce9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="STe-BM-lcu" secondAttribute="trailing" constant="25" id="sxc-2J-3H0"/>
+                <constraint firstItem="a6S-Rb-JZ6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="tV3-Ey-UP2"/>
+                <constraint firstItem="STe-BM-lcu" firstAttribute="top" secondItem="KU3-Oa-pgW" secondAttribute="bottom" priority="499" constant="35" id="zCe-R3-0uJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="button1" destination="STe-BM-lcu" id="9C4-Bj-5J8"/>
+                <outlet property="button2" destination="a6S-Rb-JZ6" id="gXy-CB-Rax"/>
+                <outlet property="infoLabel" destination="KU3-Oa-pgW" id="ZU3-Ee-BPy"/>
+            </connections>
+            <point key="canvasLocation" x="105.79710144927537" y="247.76785714285714"/>
+        </view>
+    </objects>
+</document>

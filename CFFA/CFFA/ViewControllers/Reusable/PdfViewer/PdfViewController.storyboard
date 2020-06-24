@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pdf View Controller-->
+        <scene sceneID="dl8-LI-ldq">
+            <objects>
+                <viewController storyboardIdentifier="PdfViewController" id="8io-SI-WSd" customClass="PdfViewController" customModule="CFFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EGm-df-tcB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhT-4d-xk9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOS-KS-dkp">
+                                        <rect key="frame" x="349" y="11" width="40" height="40"/>
+                                        <state key="normal" image="sendMessageIcon"/>
+                                        <connections>
+                                            <action selector="share" destination="8io-SI-WSd" eventType="touchUpInside" id="1iE-mD-jy4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uq-Th-Ncb">
+                                        <rect key="frame" x="25" y="11" width="40" height="40"/>
+                                        <state key="normal" image="backIcon"/>
+                                        <connections>
+                                            <action selector="dismiss" destination="8io-SI-WSd" eventType="touchUpInside" id="vhj-TM-7oH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="QOS-KS-dkp" secondAttribute="trailing" constant="25" id="A0S-iH-60U"/>
+                                    <constraint firstAttribute="bottom" secondItem="QOS-KS-dkp" secondAttribute="bottom" constant="4" id="Paa-gR-r7b"/>
+                                    <constraint firstAttribute="height" constant="55" id="ZZ3-3C-GBE"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Uq-Th-Ncb" secondAttribute="bottom" constant="4" id="sEN-HF-s7U"/>
+                                    <constraint firstItem="4Uq-Th-Ncb" firstAttribute="leading" secondItem="AhT-4d-xk9" secondAttribute="leading" constant="25" id="uTJ-wj-LQg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujm-ID-9en" customClass="PDFView">
+                                <rect key="frame" x="0.0" y="55" width="414" height="841"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AhT-4d-xk9" firstAttribute="trailing" secondItem="gp2-G4-vam" secondAttribute="trailing" id="09n-E5-tdp"/>
+                            <constraint firstItem="ujm-ID-9en" firstAttribute="leading" secondItem="gp2-G4-vam" secondAttribute="leading" id="Cvx-jz-r2E"/>
+                            <constraint firstItem="AhT-4d-xk9" firstAttribute="leading" secondItem="gp2-G4-vam" secondAttribute="leading" id="Hnb-xb-nsy"/>
+                            <constraint firstItem="ujm-ID-9en" firstAttribute="top" secondItem="AhT-4d-xk9" secondAttribute="bottom" id="XGZ-QK-VdD"/>
+                            <constraint firstAttribute="bottom" secondItem="ujm-ID-9en" secondAttribute="bottom" id="b7Y-Ze-4Iw"/>
+                            <constraint firstItem="AhT-4d-xk9" firstAttribute="top" secondItem="EGm-df-tcB" secondAttribute="top" id="jrc-Vb-TCe"/>
+                            <constraint firstItem="ujm-ID-9en" firstAttribute="trailing" secondItem="gp2-G4-vam" secondAttribute="trailing" id="yvy-1j-Y9h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gp2-G4-vam"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P6C-u6-sSW">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="asa-P0-kTU"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pdfView" destination="ujm-ID-9en" id="AfD-eG-TdH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OyC-FM-7we" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.71014492753636" y="59.598214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backIcon" width="40" height="40"/>
+        <image name="sendMessageIcon" width="40" height="40"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StickersCollectionViewCell" id="gTV-IL-0wX" customClass="StickersCollectionViewCell" customModule="CFFA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="82" height="82"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="82" height="82"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJQ-Mh-DXN" customClass="CustomView" customModule="CFFA" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="82" height="82"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noun_square_88266" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-UP-mbN">
+                        <rect key="frame" x="20.5" y="20.5" width="41" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="NlT-UP-mbN" secondAttribute="height" id="QDx-op-35P"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="JJQ-Mh-DXN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6pV-Sn-bd7"/>
+                <constraint firstAttribute="trailing" secondItem="JJQ-Mh-DXN" secondAttribute="trailing" id="HoR-wS-dLl"/>
+                <constraint firstItem="JJQ-Mh-DXN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="b6r-c1-Qqg"/>
+                <constraint firstItem="NlT-UP-mbN" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.5" priority="499" id="oCc-Cz-nzg"/>
+                <constraint firstItem="NlT-UP-mbN" firstAttribute="width" secondItem="JJQ-Mh-DXN" secondAttribute="width" multiplier="0.5" priority="499" id="pAV-fy-TNy"/>
+                <constraint firstAttribute="bottom" secondItem="JJQ-Mh-DXN" secondAttribute="bottom" id="rI7-io-kfz"/>
+                <constraint firstItem="NlT-UP-mbN" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="uDT-IH-3Oj"/>
+                <constraint firstItem="NlT-UP-mbN" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="un8-ef-dkl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="82" height="82"/>
+            <connections>
+                <outlet property="imageView" destination="NlT-UP-mbN" id="AIj-IZ-ufb"/>
+            </connections>
+            <point key="canvasLocation" x="152.17391304347828" y="140.625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="noun_square_88266" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AdjustAlghorithmCell" customModule="CFFA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="174"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="149" height="174"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE1-L1-fWb">
+                        <rect key="frame" x="0.0" y="0.0" width="149" height="25"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                        <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illustrationAddPhotoPost" translatesAutoresizingMaskIntoConstraints="NO" id="Kva-dL-f7a" customClass="CustomImageView" customModule="CFFA" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="25" width="149" height="149"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Kva-dL-f7a" secondAttribute="height" multiplier="1:1" id="HAU-aJ-3k3"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Kva-dL-f7a" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="13M-96-KrO"/>
+                <constraint firstAttribute="trailing" secondItem="sE1-L1-fWb" secondAttribute="trailing" id="2dJ-Rg-lmE"/>
+                <constraint firstAttribute="bottom" secondItem="Kva-dL-f7a" secondAttribute="bottom" id="66W-uR-uje"/>
+                <constraint firstAttribute="trailing" secondItem="Kva-dL-f7a" secondAttribute="trailing" id="PWb-q8-dqf"/>
+                <constraint firstItem="sE1-L1-fWb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aYs-KV-kOD"/>
+                <constraint firstItem="Kva-dL-f7a" firstAttribute="top" secondItem="sE1-L1-fWb" secondAttribute="bottom" id="oDx-va-1AJ"/>
+                <constraint firstItem="sE1-L1-fWb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wUr-IG-UnU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="149" height="174"/>
+            <connections>
+                <outlet property="imageView" destination="Kva-dL-f7a" id="ycI-5H-vqH"/>
+                <outlet property="titleLabel" destination="sE1-L1-fWb" id="hvu-8d-XAZ"/>
+            </connections>
+            <point key="canvasLocation" x="203.62318840579712" y="179.46428571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="illustrationAddPhotoPost" width="155" height="155"/>
+    </resources>
+</document>
